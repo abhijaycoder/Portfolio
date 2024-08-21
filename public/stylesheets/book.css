@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  background-color: #1f1f1f;
+  z-index: 99999;
+}
+
+#navbar__logo {
+  color: #e0e0e0;
+}
+
+#navbar__logo h1 {
+  font-size: 24px;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+#navbar__logo a:hover h1 {
+  color: #1e90ff;
+}
+
+#web_intro {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px; /* Adjust based on the height of the navbar */
+  max-width: 90%;
+  width: 100%;
+}
+
+#web__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#webBrief {
+  margin-top: 20px;
+}
+
+#webBrief h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  font-weight: 700;
+}
+
+#webBrief p {
+  font-size: 16px;
+  color: #d0d0d0;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#techUsed,
+#liveLink {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  width: 100%;
+}
+
+#techUsed h2,
+#liveLink h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  font-weight: 700;
+}
+
+#techUsed ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#techUsed ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#liveLink p {
+  font-size: 16px;
+  color: #d0d0d0;
+}
+
+#liveLink a {
+  font-weight: 600;
+}
+
+#liveLink a:hover {
+  color: #1e90ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #navbar__logo h1 {
+    font-size: 20px;
+  }
+
+  #webBrief h1 {
+    font-size: 22px;
+  }
+
+  #web__image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  #techUsed h2,
+  #liveLink h2 {
+    font-size: 20px;
+  }
+
+  #web_intro {
+    margin-top: 80px;
+  }
+
+  #webBrief p {
+    margin-top: 100px;
+    font-size: 14px;
+  }
+
+  #techUsed ul li {
+    font-size: 14px;
+  }
+
+  #liveLink p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+body {
+  background-color: black;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+#navbar {
+  position: fixed;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0 30px;
+  align-items: center;
+  border-bottom: solid 0.5px #bebebe;
+  background-color: transparent;
+  z-index: 99999;
+}
+
+#navbar__logo {
+  color: white;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+#navbar__list {
+  color: white;
+  display: flex;
+  gap: 30px;
+}
+
+#navbar__list ul {
+  list-style: none;
+}
+
+#navbar__list ul li {
+  display: inline;
+}
+
+#more {
+  display: flex;
+  height: 26px;
+  width: 26px;
+  visibility: hidden;
+}
+
+.mobile__nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.hideOnlist {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: -10px 0 109px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.hideOnlist ul {
+  list-style: none;
+}
+
+.hideOnlist ul li {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+#close {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#page1 {
+  color: white;
+  display: flex;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 100px;
+}
+
+#my__image img {
+  display: flex;
+  height: 350px;
+  width: 350px;
+  flex: 1.8;
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: -10px 0 10px #fff;
+}
+
+#myIntro h1 {
+  color: white;
+  width: auto;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+#myIntro h3 {
+  color: white;
+  width: auto;
+  font-size: bold;
+  font-weight: 700;
+}
+
+#social {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 80px;
+  justify-content: flex-start;
+}
+
+#page2 {
+  padding: 20px;
+  background-color: #121212; /* Dark background for the page section */
+}
+
+#skills {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1e1e1e; /* Slightly lighter dark background for the skill container */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#skills h2 {
+  text-align: center;
+  color: #e0e0e0; /* Light gray color for the heading */
+  margin-bottom: 20px;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#skills li {
+  background-color: #333; /* Dark background for list items */
+  border: 1px solid #444; /* Slightly lighter border */
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  color: #f5f5f5; /* Light color for the text */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#skills li:hover {
+  background-color: #444; /* Slightly lighter on hover */
+  color: #fff; /* Ensure text color is readable on hover */
+}
+
+#page3 {
+  color: white;
+  display: flex;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#About {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#About h1 {
+  display: flex;
+  width: auto;
+  padding: 0 10px;
+  position: relative;
+  top: -100px;
+  left: 50%;
+}
+
+#About p {
+  display: flex;
+  width: auto;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 50px;
+}
+
+#page4 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex-direction: column; /* Change to column for better alignment on small screens */
+}
+
+#row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping to new lines */
+  justify-content: center; /* Center align the items */
+}
+
+.service {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: blue;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#service1 {
+  background-image: url("https://media.istockphoto.com/id/2152967547/photo/admin-writing-code-on-mockup-computer-monitor-to-mend-data-center-racks.jpg?b=1&s=612x612&w=0&k=20&c=lN3B5k-5xUCmWOKHkwfINu6v-jMtRPBzPsCtO_zOU38=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#service2 {
+  background-image: url("https://images.pexels.com/photos/3184612/pexels-photo-3184612.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#service3 {
+  background-image: url("https://images.pexels.com/photos/3585090/pexels-photo-3585090.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.overlay {
+  opacity: 0;
+}
+
+#row .service :hover {
+  height: 350;
+  width: 350;
+  background: chartreuse;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+#page5 {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+#MyProjects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.project {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: blue;
+}
+
+#page6 {
+  padding: 20px;
+  background-color: black;
+}
+
+#contact {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px #fff;
+  background-color: black;
+}
+
+#contact h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+@media (max-width: 800px) {
+  #more {
+    visibility: visible;
+  }
+
+  #navbar {
+    position: fixed;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 9999;
+  }
+
+  #navbar__list {
+    visibility: hidden;
+  }
+
+  .mobile__nav {
+    display: flex;
+  }
+
+  .hideOnlist {
+    visibility: visible;
+  }
+
+  #navbar__logo {
+    margin-left: 10px;
+  }
+
+  #page1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #my__image {
+    margin-top: 45px;
+  }
+
+  #myIntro {
+    margin: 10px;
+  }
+
+  #social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 15px;
+    left: 15px;
+  }
+
+  #page3 {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #About {
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #About h1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    position: relative;
+    top: -120px;
+    right: 0;
+    left: 150px;
+  }
+
+  #About p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 70px;
+  }
+
+  #row {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .service {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  #page4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+  }
+
+  #page5 > h1 {
+    position: relative;
+    top: 200px;
+    bottom: 10px;
+  }
+
+  #MyProjects {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 250px;
+    left: 10px;
+  }
+
+  #page6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 500px;
+    bottom: 0;
+  }
+}
